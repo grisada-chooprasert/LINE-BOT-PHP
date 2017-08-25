@@ -30,7 +30,7 @@ if($arrJson['events'][0]['message']['text'] == "id"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "ผมรู้ว่าคุณแอบมีกิ๊ก ผมสะกดรอยตามคุณท่พักนึงล่ะ";
+  $arrPostData['messages'][0]['text'] = "ผมรู้ว่าคุณแอบมีกิ๊ก ผมสะกดรอยตามคุณพักนึงล่ะ";
 }
  
  
