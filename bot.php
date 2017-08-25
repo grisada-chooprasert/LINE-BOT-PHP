@@ -26,11 +26,6 @@ if($arrJson['events'][0]['message']['text'] == "id"){
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "Room ID : ".$arrJson['events'][0]['source']['roomId'];
-}else{
-  $arrPostData = array();
-  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-  $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "ผมรู้ว่าคุณแอบมีกิ๊ก ผมสะกดรอยตามคุณพักนึงล่ะ";
 }
  
  
