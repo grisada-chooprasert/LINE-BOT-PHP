@@ -21,11 +21,11 @@ if($arrJson['events'][0]['message']['text'] == "ไอเสีย"){
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "Group ID : ".$arrJson['events'][0]['source']['groupId'];
-}else if($arrJson['events'][0]['message']['text'] == "ใครหล่อที่สุด"){
+}else if($arrJson['events'][0]['message']['text'] == "xx"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = isUserEvent(); //"Room ID : ".$arrJson['events'][0]['source']['พี่เบีย'];
+  $arrPostData['messages'][0]['text'] = $this->isUserEvent(); //"Room ID : ".$arrJson['events'][0]['source']['พี่เบีย'];
 }
  
  
