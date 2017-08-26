@@ -27,7 +27,7 @@ if($arrJson['events'][0]['message']['text'] == "ไอเสีย"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "Room ID : ".$arrJson['events'][0]['source']['roomId'];
+  $arrPostData['messages'][0]['text'] = "Room ID : ".$arrJson['events'][1]['source']['userId'];
 }
  
  
