@@ -11,21 +11,21 @@ $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
  
-if($arrJson['events'][0]['message']['text'] == "id"){
+if($arrJson['events'][0]['message']['text'] == "ไอเสีย"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "SkyNSET ID : ".$arrJson['events'][0]['source']['userId'];
-}else if($arrJson['events'][0]['message']['text'] == "group"){
+}else if($arrJson['events'][0]['message']['text'] == "จุ๊บ"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "Group ID : ".$arrJson['events'][0]['source']['groupId'];
-}else if($arrJson['events'][0]['message']['text'] == "room"){
+}else if($arrJson['events'][0]['message']['text'] == "ใครหล่อที่สุด"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "Room ID : ".$arrJson['events'][0]['source']['roomId'];
+  $arrPostData['messages'][0]['text'] = "Room ID : ".$arrJson['events'][0]['source']['พี่เบีย'];
 }
  
  
