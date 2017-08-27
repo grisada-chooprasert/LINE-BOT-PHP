@@ -13,21 +13,21 @@ $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
  
-if($arrJson['events'][0]['message']['text'] == "ไอเสีย"){
+if($arrJson['events'][0]['message']['text'] == "Optimus Prime"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "SkyNSET ID : ".$arrJson['events'][0]['source']['userId'];
-}else if($arrJson['events'][0]['message']['text'] == "จุ๊บ"){
+  $arrPostData['messages'][0]['text'] = "Optimus Prime ID : ".$arrJson['events'][0]['source']['userId'];
+}else if($arrJson['events'][0]['message']['text'] == "Autobot"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "Group ID : ".$arrJson['events'][0]['source']['groupId'];
-}else if($arrJson['events'][0]['message']['text'] == "xx"){
+  $arrPostData['messages'][0]['text'] = "Autobot ID : ".$arrJson['events'][0]['source']['groupId'];
+}else if($arrJson['events'][0]['message']['text'] == "Cybertron"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "Group ID : ".$arrJson['events'][0]['source']['headers'];
+  $arrPostData['messages'][0]['text'] = "Cybertron ID : ".$arrJson['events'][0]['source']['roomId'];
 }
 
 $ch = curl_init();
