@@ -17,17 +17,17 @@ if($arrJson['events'][0]['message']['text'] == "Optimus Prime"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "Optimus Prime ID : ".$arrJson['events'][0]['source']['userId'];
+  $arrPostData['messages'][0]['text'] = "Optimus Prime : ".$arrJson['events'][0]['source']['userId'];
 }else if($arrJson['events'][0]['message']['text'] == "Autobot"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "Autobot ID : ".$arrJson['events'][0]['source']['groupId'];
+  $arrPostData['messages'][0]['text'] = "Autobot : ".$arrJson['events'][0]['source']['groupId'];
 }else if($arrJson['events'][0]['message']['text'] == "Cybertron"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "Cybertron ID : ".$arrJson['events'][0]['source']['roomId'];
+  $arrPostData['messages'][0]['text'] = "Cybertron : ".$arrJson['events'][0]['source']['roomId'];
 }
 
 $ch = curl_init();
