@@ -29,8 +29,7 @@ if($arrJson['events'][0]['message']['text'] == "ไอเสีย"){
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "Group ID : ".$arrJson['events'][0]['source']['headers'];
 }
- 
- 
+
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,$strUrl);
 curl_setopt($ch, CURLOPT_HEADER, false);
