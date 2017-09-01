@@ -23,6 +23,16 @@ if($arrJson['events'][0]['message']['text'] == "Optimus Prime"){
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "Autobot : ".$arrJson['events'][0]['source']['groupId'];
+}else if($arrJson['events'][0]['message']['text'] == "ใครหล่อที่สุด"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "พี่เบีย";
+}else if($arrJson['events'][0]['message']['text'] == "ใครสวยที่สุด"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "น้องป๊อป";
 }else if($arrJson['events'][0]['message']['text'] == "Cybertron"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
