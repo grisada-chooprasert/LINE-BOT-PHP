@@ -13,16 +13,16 @@ $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
  
-if($arrJson['events'][0]['message']['text'] == "Optimus Prime"){
+if($arrJson['events'][0]['message']['text'] == "ID"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "Optimus Prime : ".$arrJson['events'][0]['source']['userId'];
-}else if($arrJson['events'][0]['message']['text'] == "Autobot"){
+  $arrPostData['messages'][0]['text'] = "ID : ".$arrJson['events'][0]['source']['userId'];
+}else if($arrJson['events'][0]['message']['text'] == "OD"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "Autobot : ".$arrJson['events'][0]['source']['groupId'];
+  $arrPostData['messages'][0]['text'] = "OD : ".$arrJson['events'][0]['source']['groupId'];
 }else if($arrJson['events'][0]['message']['text'] == "ใครหล่อที่สุด"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
