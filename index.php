@@ -1,5 +1,4 @@
 <?php
-echo "Hello LINE BOT";
 
 namespace LINE\LINEBot\Event;
  
