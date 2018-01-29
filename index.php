@@ -1,4 +1,5 @@
 <?php
+echo "Hello LINE BOT";
 
 namespace LINE\LINEBot\Event;
  
@@ -13,12 +14,12 @@ $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
  
-if($arrJson['events'][0]['message']['text'] == "ID"){
+if($arrJson['events'][0]['message']['text'] == "User"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "ID : ".$arrJson['events'][0]['source']['userId'];
-}else if($arrJson['events'][0]['message']['text'] == "OD"){
+}else if($arrJson['events'][0]['message']['text'] == "Group"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
